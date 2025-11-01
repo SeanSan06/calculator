@@ -12,9 +12,9 @@ body {
 }
 
 #calculator-area {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     width: 500px;
     aspect-ratio: 1/1.618;
     background-color: gray;
