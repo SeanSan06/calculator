@@ -1,0 +1,21 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#calculator-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    aspect-ratio: 1/1.618;
+    background-color: gray;
+}
