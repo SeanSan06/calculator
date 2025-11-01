@@ -1,0 +1,45 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#calculator-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    aspect-ratio: 1/1.618;
+    background-color: gray;
+}
+#screen-area {
+    display: flex;
+    width: 100%;
+}
+
+#clear-delete-area {
+    display: flex;
+    flex-direction: row;
+}
+
+#number-operation-div {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+#numbers-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#operations-area {
+}
