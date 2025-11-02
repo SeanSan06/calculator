@@ -9,6 +9,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    margin: 0px;
 }
 
 #calculator-area {
@@ -22,12 +23,19 @@ body {
 }
 #screen-area {
     display: flex;
-    width: 100%;
+    width: 95%;
+    height: 100px;
+    background-color: whitesmoke;
+    margin-top: 20px;
 }
 
 #clear-delete-area {
     display: flex;
     flex-direction: row;
+    width: 95%;
+    height: 30px;
+    background-color: whitesmoke;
+    margin-top: 8px;
 }
 
 #number-operation-div {
@@ -39,7 +47,24 @@ body {
 #numbers-area {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    height: 100%;
+    background-color: rgb(151, 151, 151);
+}
+
+#numbers-area div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 30px;
+    background-color: whitesmoke;
+    margin-top: 8px;
+    gap: 16px;
 }
 
 #operations-area {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
