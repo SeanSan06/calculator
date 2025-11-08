@@ -58,26 +58,20 @@ body {
     #numbers-area {
         display: grid;
         width: auto;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 80px;
-        background-color: rgb(151, 151, 151);
-        flex: 3;
+        flex: 1;
+        margin: 8px;
+
+        background-color: gray;
     }
 
-    /* Numbers sub-area */
     #numbers-area div {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 30px;
-        background-color: whitesmoke;
-        margin-top: 8px;
         gap: 16px;
-    }
 
-    /* Numbers sub-area */
-    #operations-area {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
+        background-color: whitesmoke;
     }
