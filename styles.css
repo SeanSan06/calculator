@@ -12,6 +12,7 @@ body {
     margin: 0px;
 }
 
+/* Calculator main area */
 #calculator-area {
     display: flex;
     justify-content: flex-start;
@@ -19,52 +20,64 @@ body {
     flex-direction: column;
     width: 500px;
     aspect-ratio: 1/1.618;
+
     background-color: gray;
 }
+
+/* Screen area */
 #screen-area {
     display: flex;
     width: 95%;
     height: 100px;
-    background-color: whitesmoke;
     margin-top: 20px;
+
+    background-color: whitesmoke;
 }
 
+/* Clear and delete area */
 #clear-delete-area {
     display: flex;
     flex-direction: row;
     width: 95%;
     height: 30px;
-    background-color: whitesmoke;
     margin-top: 8px;
+
+    background-color: whitesmoke;
 }
 
+/* Operations area */
 #number-operation-div {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
-}
-
-#numbers-area {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 80px;
-    height: 100%;
-    background-color: rgb(151, 151, 151);
-}
-
-#numbers-area div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 95%;
-    height: 30px;
-    background-color: whitesmoke;
+    flex-grow: 1;
     margin-top: 8px;
-    gap: 16px;
 }
 
-#operations-area {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
+    /* Numbers sub-area */
+    #numbers-area {
+        display: grid;
+        width: auto;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px;
+        background-color: rgb(151, 151, 151);
+        flex: 3;
+    }
+
+    /* Numbers sub-area */
+    #numbers-area div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        background-color: whitesmoke;
+        margin-top: 8px;
+        gap: 16px;
+    }
+
+    /* Numbers sub-area */
+    #operations-area {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
