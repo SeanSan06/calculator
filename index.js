@@ -116,14 +116,27 @@ q_nine.addEventListener("click", function() {
 const q_equal = document.querySelector("#equal");
 q_equal.addEventListener("click", function() {
     if(firstOperandActive === false) {
-        console.log(parseInt(firstOperand) + parseInt(secondOperand));
+        if(operation === "+") {
+            console.log(parseInt(firstOperand) + parseInt(secondOperand));
+        } else if(operation === "-") {
+            console.log(parseInt(firstOperand) - parseInt(secondOperand));
+        } else if(operation === "*") {
+            console.log(parseInt(firstOperand) * parseInt(secondOperand));
+        } else if(operation === "/") {
+            console.log(parseInt(firstOperand) / parseInt(secondOperand));
+        }
+
+        firstOperand = "";
+        secondOperand = "";
+        firstOperandActive = true;
     }
+
 });
 
 const q_dot = document.querySelector("#dot");
 q_dot.addEventListener("click", function() {
     if(firstOperandActive === true) {
-
+        
     }
 });
 
@@ -131,6 +144,8 @@ const q_plus = document.querySelector("#plus");
 q_plus.addEventListener("click", function() {
     if(firstOperandActive === true) {
         firstOperandActive = false;
+        
+        operation = "+";
     }
 });
 
@@ -138,6 +153,8 @@ const q_minus = document.querySelector("#minus");
 q_minus.addEventListener("click", function() {
     if(firstOperandActive === true) {
         firstOperandActive = false;
+
+        operation = "-";
     }
 });
 
@@ -145,6 +162,8 @@ const q_asteriks = document.querySelector("#asteriks");
 q_asteriks.addEventListener("click", function() {
     if(firstOperandActive === true) {
         firstOperandActive = false;
+
+        operation = "*";
     }
 });
 
@@ -152,7 +171,8 @@ const q_backward_slash = document.querySelector("#backward-slash");
 q_backward_slash.addEventListener("click", function() {
     if(firstOperandActive === true) {
         firstOperandActive = false;
+
+        operation = "/";
     }
-    console.log(firstOperand);
-    console.log(secondOperand);
+
 });

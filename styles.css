@@ -18,7 +18,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 500px;
+    width: 45%;
     aspect-ratio: 1/1.618;
 
     background-color: gray;
