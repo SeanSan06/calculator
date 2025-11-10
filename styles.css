@@ -9,37 +9,78 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    margin: 0px;
 }
 
+/* Calculator main area */
 #calculator-area {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 500px;
+    width: 45%;
     aspect-ratio: 1/1.618;
+
     background-color: gray;
 }
+
+/* Screen area */
 #screen-area {
     display: flex;
-    width: 100%;
+    width: 95%;
+    height: 100px;
+    margin-top: 20px;
+
+    background-color: whitesmoke;
 }
 
+/* Clear and delete area */
 #clear-delete-area {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    width: 95%;
+    height: 30px;
+    margin-top: 8px;
+
+    background-color: gray;
 }
 
+#clear-delete-area button {
+    width: 25%;
+    text-align: center;
+    padding: 8px;
+
+    background-color: whitesmoke;
+}
+
+/* Operations area */
 #number-operation-div {
     display: flex;
     flex-direction: row;
+    width: 95%;
     flex-grow: 1;
+    margin-top: 8px;
 }
 
-#numbers-area {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
+    /* Numbers sub-area */
+    #numbers-area {
+        display: grid;
+        width: auto;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 80px;
+        flex: 1;
+        margin: 8px;
 
-#operations-area {
-}
+        background-color: gray;
+    }
+
+    #numbers-area button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30%;
+        gap: 16px;
+
+        background-color: whitesmoke;
+    }
