@@ -4,12 +4,17 @@ let operation = "";
 
 firstOperandActive = true;
 
-const q_screen_area = document.querySelector("#screen-area");
+const q_screen_area = document.querySelector("#screen-area p");
 
 // Clear and delete
 const q_clear = document.querySelector("#clear");
 q_clear.addEventListener("click", function() {
     q_screen_area.textContent = "";
+
+    firstOperand = "";
+    secondOperand = "";
+    operation = "";
+    firstOperandActive = true;
 });
 
 
