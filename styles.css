@@ -18,20 +18,40 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 45%;
-    aspect-ratio: 1/1.618;
+    height: 80%;
+    aspect-ratio: 9/16;
 
     background-color: gray;
+    border: solid 2px black;
+    border-radius: 16px;
 }
 
 /* Screen area */
 #screen-area {
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: border-box;
     width: 95%;
+    padding: 12px;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 16px;
 
     background-color: whitesmoke;
+    border: solid 2px black;
+    border-radius: 16px;
+}
+
+#screen-text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+#screen-text p {
+    font-size: 200%;
+    margin: 0;
 }
 
 /* Clear and delete area */
@@ -50,9 +70,18 @@ body {
     width: 25%;
     text-align: center;
     padding: 8px;
+    font-size: 1em;
 
-    background-color: whitesmoke;
-}
+    background-color: salmon;
+    border: solid 2px black;
+    border-radius: 8px;
+
+    transition: background-color 0.3s ease;
+    }
+
+    #clear-delete-area button:hover {
+        background-color: rgb(243, 80, 62);
+    }
 
 /* Operations area */
 #number-operation-div {
@@ -61,6 +90,7 @@ body {
     width: 95%;
     flex-grow: 1;
     margin-top: 8px;
+    overflow: hidden;
 }
 
     /* Numbers sub-area */
@@ -68,9 +98,9 @@ body {
         display: grid;
         width: auto;
         grid-template-columns: repeat(4, 1fr);
-        gap: 80px;
+        gap: 20px;
         flex: 1;
-        margin: 8px;
+        margin-bottom: 8px;
 
         background-color: gray;
     }
@@ -79,8 +109,19 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 30%;
-        gap: 16px;
+        width: 100%;
+        aspect-ratio: 1/1;
+        min-height: 0;
+        min-width: 0;
+        font-size: 2em;
 
         background-color: whitesmoke;
+        border: solid 2px black;
+        border-radius: 8px;
+
+        transition: background-color 0.3s ease;
+    }
+
+    #numbers-area button:hover {
+        background-color: lightgray;
     }
