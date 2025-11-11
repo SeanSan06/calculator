@@ -170,9 +170,8 @@ q_plus.addEventListener("click", function() {
         firstOperandActive = false;
         
         operation = "+";
+        q_screen_area.textContent += " + ";
     }
-
-    q_screen_area.textContent += " + ";
 });
 
 const q_minus = document.querySelector("#minus");
@@ -181,9 +180,8 @@ q_minus.addEventListener("click", function() {
         firstOperandActive = false;
 
         operation = "-";
+        q_screen_area.textContent += " - ";
     }
-
-    q_screen_area.textContent += " - ";
 });
 
 const q_asteriks = document.querySelector("#asteriks");
@@ -192,9 +190,8 @@ q_asteriks.addEventListener("click", function() {
         firstOperandActive = false;
 
         operation = "*";
+        q_screen_area.textContent += " * ";
     }
-
-    q_screen_area.textContent += " * ";
 });
 
 const q_backward_slash = document.querySelector("#backward-slash");
@@ -203,7 +200,6 @@ q_backward_slash.addEventListener("click", function() {
         firstOperandActive = false;
 
         operation = "/";
+        q_screen_area.textContent += " / ";
     }
-
-    q_screen_area.textContent += " / ";
 });
