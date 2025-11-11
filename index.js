@@ -4,12 +4,12 @@ let operation = "";
 
 firstOperandActive = true;
 
+const q_screen_area = document.querySelector("#screen-area");
+
 // Clear and delete
 const q_clear = document.querySelector("#clear");
 q_clear.addEventListener("click", function() {
-    if(firstOperandActive === true) {
-
-    }
+    q_screen_area.textContent = "";
 });
 
 
@@ -29,6 +29,8 @@ q_zero.addEventListener("click", function() {
     } else {
         secondOperand += "0";
     }
+
+    q_screen_area.textContent += "0";
 });
 
 const q_one = document.querySelector("#one");
@@ -38,6 +40,8 @@ q_one.addEventListener("click", function() {
     } else {
         secondOperand += "1";
     }
+
+    q_screen_area.textContent += "1";
 });
 
 const q_two = document.querySelector("#two");
@@ -47,6 +51,8 @@ q_two.addEventListener("click", function() {
     } else {
         secondOperand += "2";
     }
+
+    q_screen_area.textContent += "2";
 });
 
 const q_three = document.querySelector("#three");
@@ -56,6 +62,8 @@ q_three.addEventListener("click", function() {
     } else {
         secondOperand += "3";
     }
+
+    q_screen_area.textContent += "3";
 });
 
 const q_four = document.querySelector("#four");
@@ -65,6 +73,8 @@ q_four.addEventListener("click", function() {
     } else {
         secondOperand += "4";
     }
+
+    q_screen_area.textContent += "4";
 });
 
 const q_five = document.querySelector("#five");
@@ -74,6 +84,8 @@ q_five.addEventListener("click", function() {
     } else {
         secondOperand += "5";
     }
+
+    q_screen_area.textContent += "5";
 });
 
 const q_six = document.querySelector("#six");
@@ -83,6 +95,8 @@ q_six.addEventListener("click", function() {
     } else {
         secondOperand += "6";
     }
+
+    q_screen_area.textContent += "6";
 });
 
 const q_seven = document.querySelector("#seven");
@@ -92,6 +106,8 @@ q_seven.addEventListener("click", function() {
     } else {
         secondOperand += "7";
     }
+
+    q_screen_area.textContent += "7";
 });
 
 const q_eight = document.querySelector("#eight");
@@ -101,6 +117,8 @@ q_eight.addEventListener("click", function() {
     } else {
         secondOperand += "8";
     }
+
+    q_screen_area.textContent += "8";
 });
 
 const q_nine = document.querySelector("#nine");
@@ -110,6 +128,8 @@ q_nine.addEventListener("click", function() {
     } else {
         secondOperand += "9";
     }
+
+    q_screen_area.textContent += "9";
 });
 
 // Operators
@@ -117,17 +137,21 @@ const q_equal = document.querySelector("#equal");
 q_equal.addEventListener("click", function() {
     if(firstOperandActive === false) {
         if(operation === "+") {
-            console.log(parseInt(firstOperand) + parseInt(secondOperand));
+            q_screen_area.textContent = parseInt(firstOperand) + parseInt(secondOperand);
+            firstOperand = parseInt(firstOperand) + parseInt(secondOperand);
         } else if(operation === "-") {
-            console.log(parseInt(firstOperand) - parseInt(secondOperand));
+            q_screen_area.textContent = parseInt(firstOperand) - parseInt(secondOperand);
+            firstOperand = parseInt(firstOperand) - parseInt(secondOperand);
         } else if(operation === "*") {
-            console.log(parseInt(firstOperand) * parseInt(secondOperand));
+            q_screen_area.textContent = parseInt(firstOperand) * parseInt(secondOperand);
+            firstOperand = parseInt(firstOperand) * parseInt(secondOperand);
         } else if(operation === "/") {
-            console.log(parseInt(firstOperand) / parseInt(secondOperand));
+            q_screen_area.textContent = parseInt(firstOperand) / parseInt(secondOperand);
+            firstOperand = parseInt(firstOperand) / parseInt(secondOperand);
         }
 
-        firstOperand = "";
         secondOperand = "";
+        operation = "";
         firstOperandActive = true;
     }
 
@@ -147,6 +171,8 @@ q_plus.addEventListener("click", function() {
         
         operation = "+";
     }
+
+    q_screen_area.textContent += " + ";
 });
 
 const q_minus = document.querySelector("#minus");
@@ -156,6 +182,8 @@ q_minus.addEventListener("click", function() {
 
         operation = "-";
     }
+
+    q_screen_area.textContent += " - ";
 });
 
 const q_asteriks = document.querySelector("#asteriks");
@@ -165,6 +193,8 @@ q_asteriks.addEventListener("click", function() {
 
         operation = "*";
     }
+
+    q_screen_area.textContent += " * ";
 });
 
 const q_backward_slash = document.querySelector("#backward-slash");
@@ -175,4 +205,5 @@ q_backward_slash.addEventListener("click", function() {
         operation = "/";
     }
 
+    q_screen_area.textContent += " / ";
 });
